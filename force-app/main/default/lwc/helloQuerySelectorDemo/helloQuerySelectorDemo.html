@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Query Selector && lwc:dom='manual'">
+        <div class="slds-var-m-around_medium">
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <h1>Hey I am from the this.template.querySelector('h1') </h1>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="3" padding="around-small">
+            <template for:each={userNames} for:item="user">
+                <div class="Parent" key={user} title={user}>
+                    {user}
+                </div>
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item size="6" padding="around-small">
+
+            <div class="child" lwc:dom="manual"></div>
+        </lightning-layout-item>
+    </lightning-layout>
+            <lightning-button variant="brand-outline" label="Fetch Details" title="Get ALl The Details" onclick={fetchDetailHandler} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

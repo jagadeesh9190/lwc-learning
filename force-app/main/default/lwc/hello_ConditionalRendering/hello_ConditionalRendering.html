@@ -13,10 +13,14 @@
             </template><br>
 
             <lightning-input type="text" label="To see the data which user type"
-                onchange={changeHandler} ></lightning-input>
+                onchange={changeHandler} placeholder="Please Enter The hello"></lightning-input>
             <template if:true={helloMethod}>
                 <div>Hurray!! you have typed correctly</div>
             </template>
+            <template if:false={helloMethodFales}>
+                <div>you can't see the data. please type the hello </div>
+            </template><br>
+
         </div>
     </lightning-card>
 

@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Sign Up Form" icon-name="custom:custom21">
+        <div class="slds-m-around_medium">
+            <h1 class="slds-text-heading_medium slds-m-bottom_medium">Hey I am on signup page</h1>
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="text" label="First Name"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="text" label="Last Name"></lightning-input>
+                </lightning-layout-item>              
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="email" label="Email Address"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-input type="password" label="Password"></lightning-input><br>
+                </lightning-layout-item>              
+            </lightning-layout>      
+            <lightning-button variant="destructive" 
+                 label="Back" 
+                 title="Back" 
+                 onclick={handleClick} 
+                 class="slds-m-left_x-small">
+                </lightning-button>
+                <lightning-button variant="success" 
+                 label="Signup" 
+                 title="Signup" 
+                 onclick={SubmitClick} 
+                 class="slds-m-left_x-small">
+                </lightning-button>
+        </div>
+    </lightning-card>
+</template>

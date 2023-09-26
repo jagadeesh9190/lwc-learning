@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Rendering Exercise" icon-name="utility:bundle_config">
+        <div class="slds-m-around_medium">
+            <lightning-layout>
+                <lightning-layout-item size=6 padding="arount-medium">
+                    <lightning-input type="text" label="Employee Name" placeholder="Enter Your Name" onchange={nameHandler} value={name}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout><br>
+            <lightning-layout>
+                <lightning-layout-item size=6 padding="arount-medium">
+                    <lightning-input type="number" label="Employee Age" placeholder="Enter Your Age" onchange={ageHandler} value={age}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout><br>
+            <lightning-layout>
+                <lightning-layout-item size=6 padding="arount-medium">
+                    <lightning-input type="number" label="Employee Salary" placeholder="Enter Salary Amount" onchange={salaryHandler} value={salary}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout><br>
+            <lightning-layout>
+                <lightning-layout-item size=3 padding="arount-medium">
+                    <lightning-button variant="brand" label="Save" title="Employee Details" onclick={handleClick} ></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout><br>
+            <template lwc:if={isVisible}>
+                <lightning-card title="Employee Details" icon-name=utility:database>
+                    <div class="slds-m-around_medium">
+                        <div>
+                            <p><strong>Employee Name:</strong> {name} </p>
+                            <p><strong>Employee Age:</strong> {age}</p>
+                            <p><strong>Employee Salary:</strong> {salary}</p>
+                        </div>
+                    </div>
+                    <div class="slds-box slds-box_xx-small slds-theme_shade slds-p-around_none slds-m-around_none">
+                    </div>
+                    <div class="slds-text-align_center slds-text-heading_large">
+                        <header class="slds-text-heading_medium slds-m-around_xx-small">
+                            <h1>Infosys</h1>
+                        </header>
+                    </div>
+                </lightning-card>
+            </template>
+        </div>
+    </lightning-card>   
+</template>

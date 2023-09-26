@@ -32,8 +32,8 @@ export default class QuizApp extends LightningElement {
             id: "Question3",
             question: "Which one of the following is not a directive?",
             answers: {
-                a: "for:each",
-                b: "if:true",
+                a: "lwc:else",
+                b: "lwc:if",
                 c: "@track"
             },
             correctAnswer: "c"
@@ -51,11 +51,11 @@ export default class QuizApp extends LightningElement {
     }
     //changeHandler get's called on every click on the option
     changeHandler(event) {
-        console.log("name", event.target.name)
-        console.log("value", event.target.value)
-        const { name, value } = event.target //using object destructuring
+        //console.log("name", event.target.name)
+        //console.log("value", event.target.value)
         //const name = event.target.name
         //const value = event.target.value
+        const { name, value } = event.target //using object destructuring
         this.seleacted = { ...this.seleacted, [name]: value }
     }
     //form submit handler

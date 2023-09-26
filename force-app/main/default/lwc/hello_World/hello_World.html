@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Sample Hello World Component" >
+        <div class="slds-m-around_medium"> Hello World</div>
+    </lightning-card> <br>
+    <lightning-card title="One Way Data Binding From Controller(Js) To Template(HTML) By Using Primitive -{name} or Object -{obj.name}">
+    <div class="slds-m-around_medium">
+        <div>Full Name: "{firstName} {object.lastName}"</div>
+        <div>Work Location: "{object.workLocation}"</div>
+    </div>
+</lightning-card> <br>
+<lightning-card title="Two Way Data Binding From 1. Template(HTML) To Controller(Js) By Calling Methods IN JS -Method(event){this.name = event.target.value;} && 2. Controller(Js) To Template(HTML) By Using Primitive -{name} or Object -{obj.name} ">
+    <div class="slds-m-around_medium">
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="text" label="Enter Course Title" onkeyup={courseHandler}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <div>"{firstName} {object.lastName}" is learning a course in "{courseTitle}"</div>
+    </div>
+</lightning-card> <br>
+<lightning-card title="@track to re-render the values for fields in Object and Array form Template(HTML) To Controller(Js) By using @track or Spread Operator">
+    <div class="slds-m-around_medium">
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="text" label="Enter Address1 City Name(@track -this.address1.city = event.target.value)" onkeyup={address1Handler}></lightning-input>
+                <div>"{address1.city}" is my City</div>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="text" label="Enter Address2 City Name(this.address2 ={...this.address2, 'city':event.target.value})" onkeyup={address2Handler}></lightning-input>
+                <div>"{address2.city}" is my City</div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</lightning-card><br>
+<lightning-card title="Doing Operations in Controller(JS) by using 'GETTER Method' -get methodName(){return operation/callingarray} and rendering the value in Template(HTML)">
+    <div title="Array" class="slds-m-around_medium">
+        <div>Under list of users in array getting first user name is "{firstUser}"</div>
+        <div>Multiplication of {num1} and {num2} values is {multiplication} by doing operation in JS </div>
+    </div>
+</lightning-card>
+</template>

@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Parent Template" class="slds-text-heading_medium">
+        <div class="slds-m-around_medium">
+            <c-p2c-alert-component
+            message = "Hurray..! I got the premitive data from parent to child"
+            card-heading = "Parent To Child Primitive Data Communication(Simple Data)"
+            number = 11
+            is-visible >
+        </c-p2c-alert-component><br>
+        <div class="slds-m-bottom_large"></div>
+        <c-p2c-carousel-component
+         carousel-details={carouselData}
+         card-label ="Parent To Child Non-Primitive Data Communication(Complex Data)" >
+        </c-p2c-carousel-component><br>
+        <div class="slds-m-bottom_large"></div>
+        <lightning-input type="number" label="Enter Percentage" onkeyup={changeHandler} value={percentage}></lightning-input>
+        <c-p2c-progress-component
+        progress-value ={percentage}
+         card-heading="Parent To Child Non-Primitive Data Communication On Action">
+        </c-p2c-progress-component> <br>
+        <div class="slds-m-bottom_large"></div>
+        <lightning-button variant="brand" label="Reset Slider" onclick={resetHandler} ></lightning-button>
+        <c-p2c-slider-component
+         card-heading="Calling Child Method from Parent Component">
+        </c-p2c-slider-component>
+        </div>
+    </lightning-card> 
+</template>

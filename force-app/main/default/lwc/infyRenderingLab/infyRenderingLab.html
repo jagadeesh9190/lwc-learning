@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Rendering Exercise" icon-name="utility:bundle_config">
+        <div class="slds-m-around_medium">
+            <div>
+                <p><strong>Employee First Name:</strong> {fName} </p>
+                <p><strong>Employee Last Name:</strong> {lName}</p>
+                <p><strong>Employee Age:</strong> {age}</p>
+            </div>
+            <lightning-layout>
+                <lightning-layout-item size=6 padding="arount-medium">
+                    <lightning-input type="text" label="First Name" placeholder="Enter Your First Name" onchange={firstNameHandler} value={fName}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout><br>
+            <lightning-layout>
+                <lightning-layout-item size=6 padding="arount-medium">
+                    <lightning-input type="text" label="Last Name" placeholder="Enter Your Last Name" onchange={lastNameHandler} value={lName}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout><br>
+            <lightning-layout>
+                <lightning-layout-item size=6 padding="arount-medium">
+                    <lightning-input type="number" label="Age" placeholder="Enter Your Age" onchange={ageHandler} value={age}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card> 
+</template>

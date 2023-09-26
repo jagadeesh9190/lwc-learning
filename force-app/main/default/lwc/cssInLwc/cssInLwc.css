@@ -1,0 +1,17 @@
+p{
+    color: blue;
+    font-size: 20px;
+    border: 1px solid red;
+}
+.user{
+    color: greenyellow;
+    font-size: 30px;
+}
+.user:hover{
+    color: green;
+    font-size: 40px;
+}
+.tocken{
+    color: var(--lwc-brandAccessible);
+    font-size: var(--lwc-fontSize11);
+}

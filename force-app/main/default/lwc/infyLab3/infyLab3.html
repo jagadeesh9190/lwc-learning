@@ -1,0 +1,87 @@
+<template>
+    <lightning-card title="Mathmatical Calculation" icon-name="utility:notebook">
+        <div class="slds-m-around_medium">
+            <lightning-layout>
+                <lightning-layout-item size=6 padding="arount-medium">
+                    <lightning-button variant="brand" label="Simple Calculator" title="Simple Calculator"
+                        onclick={handleSampleCalculator}></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item size=6 padding="arount-medium">
+                    <lightning-button variant="brand" label="Simple Interest Calculator"
+                        title="Simple Interest Calculator" onclick={handleSampleIntrestCalculator}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <template lwc:if={showSimpleCalculator}>
+            <lightning-card title="Sample Canculator">
+                <div class="slds-m-around_medium">
+                    <div>
+                        <lightning-layout>
+                            <lightning-layout-item size=6 padding="arount-medium">
+                                <lightning-input type="number" label="Enter First Number" placeholder="Value1 Ex: 10"
+                                    onchange={firstNumberHandler} value={value1}></lightning-input>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                        <lightning-layout>
+                            <lightning-layout-item size=6 padding="arount-medium">
+                                <lightning-input type="number" label="Enter Second Number" placeholder="Value2 Ex: 20"
+                                    onchange={secodNumberHandler} value={value2}></lightning-input>
+                            </lightning-layout-item><br>
+                        </lightning-layout>
+                        <div class="slds-m-top_small slds-m-bottom_medium">
+                            <lightning-button variant="success" label="Add" onclick={add}
+                                class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button variant="success" label="Subtract" onclick={subtract}
+                                class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button variant="success" label="Multiply" onclick={multiply}
+                                class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button variant="success" label="Divide" onclick={divide}
+                                class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                        <div>
+                            <p>{result}</p>
+                        </div>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+        <template lwc:if={showSimpleInterestCalculator}>
+            <lightning-card title="Sample Interest Canculator">
+                <div class="slds-m-around_medium">
+                    <div>
+                        <lightning-layout>
+                            <lightning-layout-item size=6 padding="arount-medium">
+                                <lightning-input type="number" label="Enter Principal" placeholder="Amount"
+                                    onchange={principalAmountHandler} value={principalAmount}></lightning-input>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                        <lightning-layout>
+                            <lightning-layout-item size=6 padding="arount-medium">
+                                <lightning-input type="number" label="Enter Number Of Years" placeholder="Time"
+                                    onchange={noOfYearsHandler} value={noOfYears}></lightning-input>
+                            </lightning-layout-item><br>
+                        </lightning-layout>
+                        <lightning-layout>
+                        <lightning-layout-item size=6 padding="arount-medium">
+                            <lightning-input type="number" label="Enter Rate Of Interest" placeholder="Rate"
+                                onchange={rateOfInterestHandler} value={rateOfInterest}></lightning-input>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                        <div class="slds-m-top_small slds-m-bottom_medium slds-text-align_right">
+                            <lightning-button variant="success" label="Calculate Simple Interest" onclick={calculateSimpleInterest}
+                                class="slds-m-left_xx-large"></lightning-button>
+                        </div>
+                        <div>
+                            <p>{result}</p>
+                        </div>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+        <div class="slds-box slds-box_xx-small slds-theme_shade slds-p-around_none slds-m-around_none">
+        </div>
+        <div class="slds-text-align_center slds-text-heading_large slds-m-around_xx-small">
+            <h1>Lightning Web Component</h1>
+        </div>
+    </lightning-card>
+</template>
