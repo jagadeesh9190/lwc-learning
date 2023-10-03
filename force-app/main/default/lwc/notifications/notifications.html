@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Toast Notification Demo">
+        <div class="slds-m-around_medium">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="3" padding="around-medium">
+                    <lightning-button label="Success" variant="brand" onclick={successHandleClick}></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item size="3" padding="around-medium">
+                    <lightning-button label="Error" variant="brand" onclick={errorHandleClick}></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item size="3" padding="around-medium">
+                    <lightning-button label="Warning" variant="brand" onclick={warningHandleClick}></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item size="3" padding="around-medium">
+                    <lightning-button label="Information" variant="brand" onclick={informationHandleClick}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+            
+            
+
+        </div>
+
+    </lightning-card>
+
+</template>

@@ -1,5 +1,8 @@
-@import 'c/sharedCss';
-.css2{
-    width: 90%;
-    background-color: goldenrod;
+@import 'c/cssLibrary';
+.html{
+    width:90%;
+    background-color: #4caf50;
+}
+.abc{
+    color:red;
 }

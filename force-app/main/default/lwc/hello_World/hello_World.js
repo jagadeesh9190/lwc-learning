@@ -37,7 +37,7 @@ export default class Hello_World extends LightningElement {
     // Doing Operations in Controller(JS) and by using GETTER rendering the value in Template(HTML)
     users = ["Jagadeesh", "Lokesh","Rakesh","Rikesh","Gopi"]
     get firstUser(){
-        return this.users[0]
+        return this.users[0].toUpperCase();
     }
     num1 = 80;
     num2 = 50;

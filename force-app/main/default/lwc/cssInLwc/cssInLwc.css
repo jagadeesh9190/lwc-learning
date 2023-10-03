@@ -1,17 +1,14 @@
+/* element, classes, pseudo */
 p{
-    color: blue;
-    font-size: 20px;
-    border: 1px solid red;
+    color:green;
+    font-size: 30px;
+    border: 1px solid red;;
 }
 .user{
-    color: greenyellow;
-    font-size: 30px;
+    color:pink;
+    font-size: 20px;
 }
 .user:hover{
-    color: green;
-    font-size: 40px;
-}
-.tocken{
-    color: var(--lwc-brandAccessible);
-    font-size: var(--lwc-fontSize11);
+    font-size: 50px;
+    color:red;
 }
