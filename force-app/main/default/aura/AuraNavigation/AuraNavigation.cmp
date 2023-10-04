@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes, 
+lightning:isUrlAddressable" access="global">
+    <lightning:card title="Navigate to Aura Target">
+
+
+        <aura:attribute name="id" type="String" />
+        <aura:handler name="init" value="{!this}" action="{!c.onload}" />
+
+        <div class="slds-card">
+            <div> Hey I am coming from lwc and my record id is {!v.id}</div>
+        </div>
+    </lightning:card>
+</aura:component>
