@@ -14,7 +14,7 @@ export default class MemoryGameLwc extends LightningElement {
         {id:1, listClass:"card", type:'diamond', icon:'fa fa-diamond'},
         {id:2, listClass:"card", type:'plane', icon:'fa fa-paper-plane-o'},
         {id:3, listClass:"card", type:'anchor', icon:'fa fa-anchor'},
-        {id:4, listClass:"card", type:'bolt', icon:'fa fa-bolt'},
+        {id:4, listClass:"card", typequy:'bolt', icon:'fa fa-bolt'},
         {id:5, listClass:"card", type:'cube', icon:'fa fa-cube'},
         {id:6, listClass:"card", type:'anchor', icon:'fa fa-anchor'},
         {id:7, listClass:"card", type:'leaf', icon:'fa fa-leaf'},

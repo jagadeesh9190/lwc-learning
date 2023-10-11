@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="getObjectInfo Wire Adapter Using @Wire As Function">
+        <div class="slds-p-around_medium">
+            <template lwc:if={objectDetails}>
+                <div><strong>Default Record Type Id : </strong>{objectDetails.defaultRecordTypeId}</div>
+                <div><strong>Object API Name : </strong>{objectDetails.apiName}</div>
+            </template>
+
+        </div>
+    </lightning-card><br>
+    <lightning-card title="getObjectInfo Wire Adapter Using @Wire As Property">
+        <div class="slds-p-around_medium">
+            <template lwc:if={objectInfoProperty.data}>
+                <div><strong>Default Record Type Id : </strong>{objectInfoProperty.data.defaultRecordTypeId}</div>
+                <div><strong>Object API Name : </strong>{objectInfoProperty.data.apiName}</div>
+            </template>
+        </div>
+    </lightning-card>
+    <br>
+    <lightning-card title="getObjectInfos Wire Adapter">
+        <div class="slds-p-around_medium">
+            <template if:true={objectInfos}>
+                <template for:each={objectInfos.results} for:item="obj">
+                    <div key={obj.result.apiName}>
+                        <div><strong>Default Record Type Id : </strong>{obj.result.defaultRecordTypeId}</div>
+                        <div><strong>Object API Name : </strong>{obj.result.apiName}</div>
+                    </div>
+                </template>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

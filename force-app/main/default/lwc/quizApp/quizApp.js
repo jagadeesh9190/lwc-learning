@@ -71,6 +71,5 @@ export default class QuizApp extends LightningElement {
         this.seleacted = {}
         this.correctAnswers = 0
         this.isSubmitted = false
-
     }
 }

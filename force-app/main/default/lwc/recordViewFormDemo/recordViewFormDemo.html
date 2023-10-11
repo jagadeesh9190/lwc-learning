@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="lightning-record-view-form with customzed liightning-output-field">
+        <div class="slds-p-around_medium">
+            <lightning-record-view-form object-api-name="Account" record-id="0012w00001wPuXEAA0">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-output-field field-name="Name"></lightning-output-field>
+                        <lightning-output-field field-name="OwnerId"></lightning-output-field>
+                        <lightning-output-field field-name="Rating"></lightning-output-field>
+                        <lightning-output-field field-name="AccountSource"></lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-output-field field-name="Active__c"></lightning-output-field>
+                        <lightning-output-field field-name="CustomerPriority__c"></lightning-output-field>
+                        <lightning-output-field field-name="NumberofLocations__c"></lightning-output-field>
+                        <lightning-output-field field-name="SLA__c"></lightning-output-field>
+                    </div>
+                </div>
+            </lightning-record-view-form>
+        </div>
+    </lightning-card><br>
+    <lightning-card title="lightning-record-view-form with customzed lightning-output-field In RecordPage">
+        <div class="slds-p-around_medium">
+            <lightning-record-view-form object-api-name={objectName} record-id={recordId}>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-output-field field-name="Name"></lightning-output-field>
+                        <lightning-output-field field-name="OwnerId"></lightning-output-field>
+                        <lightning-output-field field-name="Rating"></lightning-output-field>
+                        <lightning-output-field field-name="AccountSource"></lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-output-field field-name="Active__c"></lightning-output-field>
+                        <lightning-output-field field-name="CustomerPriority__c"></lightning-output-field>
+                        <lightning-output-field field-name="NumberofLocations__c"></lightning-output-field>
+                        <lightning-output-field field-name="SLA__c"></lightning-output-field>
+                    </div>
+                </div>
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+</template>

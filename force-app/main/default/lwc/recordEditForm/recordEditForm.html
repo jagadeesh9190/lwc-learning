@@ -1,0 +1,78 @@
+<template>
+    <lightning-card title="lightning record edit form">
+        <div class="slds-p-around_medium">
+            <lightning-record-edit-form object-api-name={objectName} onsuccess={successHandler}>
+                <lightning-messages></lightning-messages>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input-field field-name={fields.accountField}></lightning-input-field>
+                        <lightning-input-field field-name={fields.nameField}></lightning-input-field>
+                        <lightning-input-field field-name={fields.titleField}></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input-field field-name={fields.phoneField}></lightning-input-field>
+                        <lightning-input-field field-name={fields.emailField}></lightning-input-field>
+                    </div>
+                </div>
+                <lightning-button onclick={handleReset} class="slds-m-around_xx-small"
+                    label="cancel"></lightning-button>
+                <lightning-button variant="brand" type="submit" class="slds-m-around_xx-small"
+                    label="Save"></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card><br>
+    <lightning-card title="lightning record edit form">
+        <div class="slds-p-around_medium">
+            <lightning-record-edit-form object-api-name={objectName} record-id={recordId}>
+                <lightning-messages></lightning-messages>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input-field field-name={fields.accountField}></lightning-input-field>
+                        <lightning-input-field field-name={fields.nameField}></lightning-input-field>
+                        <lightning-input-field field-name={fields.titleField}></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input-field field-name={fields.phoneField}></lightning-input-field>
+                        <lightning-input-field variant="label-hidden"
+                            field-name={fields.emailField}></lightning-input-field>
+                    </div>
+                </div>
+                <lightning-button onclick={handleReset} class="slds-m-around_xx-small"
+                    label="cancel"></lightning-button>
+                <lightning-button variant="brand" type="submit" class="slds-m-around_xx-small"
+                    label="Save"></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card><br>
+    <lightning-card title="lightning record edit form">
+        <div class="slds-p-around_medium">
+            <lightning-record-edit-form object-api-name={objectName} record-id="0032w00001HpDK5AAN">
+                <lightning-messages></lightning-messages>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_6-of-12">
+                        <label class="slds-p-left_x-small">Account Name.</label>
+                        <lightning-input-field field-name={fields.accountField}></lightning-input-field>
+                        <label class="slds-p-left_x-small">Name.</label>
+                        <lightning-input-field variant="label-hidden"
+                            field-name={fields.nameField}></lightning-input-field>
+                        <label class="slds-p-left_x-small">Title.</label>
+                        <lightning-input-field variant="label-hidden"
+                            field-name={fields.titleField}></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12">
+                        <label class="slds-p-left_x-small">Phone.</label>
+                        <lightning-input-field variant="label-hidden"
+                            field-name={fields.phoneField}></lightning-input-field>
+                        <label class="slds-p-left_x-small">Email.</label>
+                        <lightning-input-field variant="label-hidden"
+                            field-name={fields.emailField}></lightning-input-field>
+                    </div>
+                </div>
+                <lightning-button onclick={handleReset} class="slds-m-around_xx-small"
+                    label="cancel"></lightning-button>
+                <lightning-button variant="brand" type="submit" class="slds-m-around_xx-small"
+                    label="Save"></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
