@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Contact Creator">
+        <lightning-combobox label="Select Account" options={accountOptions} value={selectedAccountId}
+            onchange={handleAccountChange}>
+        </lightning-combobox>
+
+        <lightning-button label="Create" onclick={handleCreateClick}></lightning-button>
+
+        <c-create-related-contact if:true={showModal} selected-account-id={selectedAccountId} onsave={handleSave}
+            oncancel={handleCancel}>
+        </c-create-related-contact>
+
+        <lightning-button label="Display" onclick={handleDisplayClick}></lightning-button>
+    </lightning-card>
+</template>

@@ -1,42 +1,4 @@
 <template>
-    <lightning-card title="Properties Binding from JS to HTML by using {propertyname}">
-        <div class="slds-var-m-around_large">
-            <!-- Properties binding from JS to HTML -->
-            <div>{fullname}</div>
-            <div>{obj.name}</div>
-        </div>
-    </lightning-card>
-
-    <lightning-card title="Two Way Data Binding">
-        <div class="slds-var-m-around_large">
-            <!-- Properties binding from JS to HTML -->
-            <div>{fullname}</div>
-            <div>{obj.name}</div>
-
-            <!-- Two way data binding 1. from HTML by using onchange 2. from JS directly fetching data by susng {propertyName}brackets -->
-            <lightning-input type="text" label="Cource Name" onkeyup={changeHandler}></lightning-input>
-            <div> {fullName} is a course of {title}</div>
-        </div>
-    </lightning-card>
-
-    <lightning-card title="@Track Property">
-        <div class="slds-var-m-around_large">
-            <lightning-input type="text" label="Enter City Name" onkeyup={trackHandler}></lightning-input>
-            <div>{address.city} is my city</div>
-        </div>
-    </lightning-card>
-
-    <lightning-card title="Getter Example Demo">
-        <div class="slds-var-m-around_large">
-            <!-- Invalid expression form JS to HTNL template by sing array or operations 
-           <div>{users[0]}</div>
-           <div>{num1 * num2}</div> -->
-           <!--Valid expression for array and operations by suing GETTER Method-->
-           <div>First User Name is {firstUserName}</div>
-           <div>Multiplyed Num1 and Num2 value is {multiplyOperation} </div>
-
-        </div>
-    </lightning-card>
-
-
+    <div>{fullname}</div>
+    <div>obj.name</div>
 </template>

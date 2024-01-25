@@ -5,7 +5,7 @@ export default class NavigateToWebPage extends NavigationMixin(LightningElement)
         this[NavigationMixin.Navigate]({
             type:'standard__webPage',
             attributes:{
-                url:'https://www.salesforcetroop.com' //https://genesys.okta.com/
+                url:'https://www.salesforcetroop.com'//https://genesys.okta.com/
             }
         })
     }

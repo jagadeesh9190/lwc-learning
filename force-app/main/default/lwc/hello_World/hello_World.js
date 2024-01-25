@@ -45,5 +45,3 @@ export default class Hello_World extends LightningElement {
         return this.num1*this.num2;
     }
 }
-
-

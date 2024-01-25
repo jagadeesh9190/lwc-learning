@@ -1,0 +1,31 @@
+    <template>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal Header -->
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-modal__title">Contact Information</h2>
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={handleCancel}>
+                        X
+                    </button>
+                </header>
+    
+                <!-- Modal Content -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <!-- Your form inputs go here -->
+                    <lightning-input label="First Name"></lightning-input>
+                    <lightning-input label="Last Name"></lightning-input>
+                    <lightning-input label="Email"></lightning-input>
+                    <lightning-input label="Phone"></lightning-input>
+                </div>
+    
+                <!-- Modal Footer -->
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Save" onclick={handleSave}></lightning-button>
+                    <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
