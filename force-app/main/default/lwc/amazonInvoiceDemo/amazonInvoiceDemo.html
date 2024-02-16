@@ -1,0 +1,209 @@
+<template>
+    <div class="container" style="background: white; padding: 30px;">
+        <div style="margin-bottom: 50px">
+            <img src={imageUrl} style="height: 40px;width: 150px" />
+            <div style="display: inline-block;float: right; text-align: right">
+                <div><strong>{invoiceHeading.line1}</strong>}</div>
+                <div>{invoiceHeading.line2}</div>
+            </div>
+        </div>
+        <div>
+            <div style="margin-bottom: 30px">
+                <div style="display: inline-block">
+                    <header><Strong>Sold By :</Strong></header>
+                    <div>{ClientSoldBy.clientName}</div>
+                    <div>{ClientSoldBy.clientAddress1}</div>
+                    <div>{ClientSoldBy.clientAddress2}</div>
+                    <div>{ClientSoldBy.clientAddress3}</div>
+                    <div>{ClientSoldBy.clientAddress4}</div>
+                </div>
+                <div style="display: inline-block;text-align: right;float: right">
+                    <header><Strong>Billing Address :</Strong></header>
+                    <div>{customerBillingAddress.customerName}</div>
+                    <div>{customerBillingAddress.customerAddress1}</div>
+                    <div>{customerBillingAddress.customerAddress2}</div>
+                    <div>{customerBillingAddress.customerAddress3}</div>
+                    <div><strong>State/UT Code</strong>{customerBillingAddress.customerStateCode}</div>
+                </div>
+            </div>
+            <div style="margin-bottom: 120px">
+                <div style="display: inline-block">
+                    <div><strong>PAN No:</strong>{otherDetails.panNo}</div>
+                    <div><strong>GST Registration No:</strong>{otherDetails.gstRegNo}</div>
+                    <div><strong>Dynamic QR Code:</strong>{otherDetails.qrCode}</div>
+                </div>
+                <div style="display: inline-block;text-align: right;float: right">
+                    <header><Strong>Shipping Address :</Strong></header>
+                    <div>{shippingAddress.firstName}</div>
+                    <div>{shippingAddress.lastName}</div>
+                    <div>{shippingAddress.shippingAddress1}</div>
+                    <div>{shippingAddress.shippingAddress2}</div>
+                    <div>{shippingAddress.shippingAddress3}</div>
+                    <div><strong>State/UT Code:</strong>{shippingAddress.shippingStateCode}</div>
+                    <div><strong>Place of supply:</strong>{shippingAddress.shippingSupply}</div>
+                    <div><strong>Place of delivery:</strong>{shippingAddress.shippingDelivery}</div>
+                </div>
+            </div>
+            <div style="margin-bottom: 30px">
+                <div style="display: inline-block">
+                    <div><strong>Order Number:</strong>{orderDetails.orderNo}</div>
+                    <div><strong>Order Date:</strong>{orderDetails.orderDate}</div>
+                </div>
+                <div style="display: inline-block;text-align: right;float: right">
+                    <div><strong>Invoice Number :</strong>{inoiceDetails.invoiceNo}</div>
+                    <div><strong>Invoice Details :</strong>{inoiceDetails.invoiceDetails}</div>
+                    <div><strong>Invoice Date :</strong>{inoiceDetails.invoiceDate}</div>
+                </div>
+            </div>
+            <div>
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout slds-table_striped"
+                    aria-label=" Example headless table of Opportunities with cell content wrapped ">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Sr. No">Sr. No</div>
+                            </th>
+                            <th class="" scope="col" style="width:20rem">
+                                <div class="slds-truncate" title="Description">Description</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Unit Price">Unit Price</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Discount">Discount</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Qty">Qty</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Net Amount">Net Amount</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Tax Rate">Tax Rate</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Tax Type">Tax Type</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Tax Amount">Tax Amount</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Total Amount">Total Amount</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={invoiceData} for:item="item" for:index="index">
+                            <tr class="slds-hint-parent" key={item.id}>
+                                <td data-label="Sr. No">
+                                    <div class="slds-truncate" title="Sr. No">{item.serialNumber}</div>
+                                </td>
+                                <td class="slds-cell-wrap" data-label="Wrapped, line clamped">
+                                    <div class="slds-line-claAmp" title="Description">{item.description}</div>
+                                </td>
+                                <td data-label="Unit Price">
+                                    <div class="slds-truncate" title="Unit Price">{item.unitPrice}</div>
+                                </td>
+                                <td data-label="Discount">
+                                    <div class="slds-truncate" title="Discount">{item.discount}</div>
+                                </td>
+                                <td data-label="Qty">
+                                    <div class="slds-truncate" title="Qty">{item.quantity}</div>
+                                </td>
+                                <td data-label="Net Amount">
+                                    <div class="slds-truncate" title="Net Amount">{item.netAmount}</div>
+                                </td>
+                                <td data-label="Tax Rate">
+                                    <div class="slds-truncate" title="Tax Rate">{item.taxRate}</div>
+                                </td>
+                                <td data-label="Tax Type">
+                                    <div class="slds-truncate" title="Tax Type">{item.taxType}</div>
+                                </td>
+                                <td data-label="Tax Amount">
+                                    <div class="slds-truncate" title="Tax Amount">{item.taxAmount}</div>
+                                </td>
+                                <td data-label="Total Amount">
+                                    <div class="slds-truncate" title="Total Amount">{item.totalAmount}</div>
+                                </td>
+                            </tr>
+                        </template>
+                        <template for:each={invoiceShippingData} for:item="item" for:index="index">
+
+                            <tr key={item.id}>
+                                <td></td>
+                                <td class="slds-cell-wrap" data-label="Wrapped, line clamped">
+                                    <div class="slds-line-clamp" title="Description">{item.description}</div>
+                                </td>
+                                <td data-label="Unit Price">
+                                    <div class="slds-truncate" title="Unit Price">{item.unitPrice}</div>
+                                </td>
+                                <td data-label="Discount">
+                                    <div class="slds-truncate" title="Discount">{item.discount}</div>
+                                </td>
+                                <td data-label="Qty">
+                                    <div class="slds-truncate" title="Qty">{item.quantity}</div>
+                                </td>
+                                <td data-label="Net Amount">
+                                    <div class="slds-truncate" title="Net Amount">{item.netAmount}</div>
+                                </td>
+                                <td data-label="Tax Rate">
+                                    <div class="slds-truncate" title="Tax Rate">{item.taxRate}</div>
+                                </td>
+                                <td data-label="Tax Type">
+                                    <div class="slds-truncate" title="Tax Type">{item.taxType}</div>
+                                </td>
+                                <td data-label="Tax Amount">
+                                    <div class="slds-truncate" title="Tax Amount">{item.taxAmount}</div>
+                                </td>
+                                <td data-label="Total Amount">
+                                    <div class="slds-truncate" title="Total Amount">{item.totalAmount}</div>
+                                </td>
+                            </tr>
+                        </template>
+                        <template for:each={totalAmount} for:item="item" for:index="index">
+
+                            <tr key={item.id}>
+                                <td style="float: right;text-align: right;"><strong>{item.label}</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="background: grey" data-label="Tax Amount">
+                                    <div class="slds-truncate" title="Tax Amount"><strong>{item.taxAmount}</strong>
+                                    </div>
+                                </td>
+                                <td style="background: grey" data-label="Total Amount">
+                                    <div class="slds-truncate" title="Total Amount"><strong>{item.totalAmount}</strong>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+                <div>
+                    <div style="display: inline-block; margin-bottom: 80px;">
+                        <div><strong>{totalAmountInWords.description}</strong></div>
+                        <div><strong>{totalAmountInWords.amountInWord}</strong></div>
+                    </div>
+                    <div style="display: inline-block;text-align: right;float: right; margin-top: 40px;">
+                        <div><strong>{authSign.description}</strong></div>
+                        <div style="margin-top: 50px;"><strong>{authSign.sign}</strong></div>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: inline-block">
+                        <div><strong>{bottomDesc.description}</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <lightning-button variant="brand" label="Generate PDF" onclick={pdfHandler}></lightning-button>
+        </div>
+    </div>
+
+</template>

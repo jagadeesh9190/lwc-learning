@@ -1,0 +1,12 @@
+<apex:page controller="amazonPdfPageController" renderAs="pdf" applyHtmlTag="false" showHeader="false" cache="true" readOnly="true">
+    <!-- Begin Default Content REMOVE THIS -->
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    </head>
+    <apex:outputText value="{!pdfText}" escape="false" />
+
+    </html>
+    <!-- End Default Content REMOVE THIS -->
+</apex:page>
