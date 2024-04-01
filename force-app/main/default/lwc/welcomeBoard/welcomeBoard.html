@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>
+        <div class="welcomeCard slds-text-align_center slds-text-heading_medium slds-var-m-around_medium">
+            <template if:true={userDetail}>
+                <p>Welcome, {userDetail.Name.value}! Glad to have you back here!!!</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
